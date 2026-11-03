@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>As minhas tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>As minhas tarefas</h1>
+    <p id="contador"></p>
+
+    <form id="formulario">
+      <input type="text" id="titulo" placeholder="Nova tarefa…" required>
+      <select id="prioridade">
+        <option value="alta">Alta</option>
+        <option value="media" selected>Média</option>
+        <option value="baixa">Baixa</option>
+      </select>
+      <button type="submit" class="principal">Adicionar</button>
+    </form>
+
+    <div id="filtros">
+      <button data-filtro="todas" class="ativo">Todas</button>
+      <button data-filtro="pendentes">Pendentes</button>
+      <button data-filtro="concluidas">Concluídas</button>
+    </div>
+
+    <ul id="lista"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
