@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import type { Tarefa } from "../Types/Tarefa";
+import type { Tarefa } from "../types/Tarefa";
 import { listarTarefas, alterarTarefa as alterarTarefaService } from "../services/tarefaServisces";
 
 interface TarefasContextData {

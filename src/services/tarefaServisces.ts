@@ -1,5 +1,5 @@
 import { api, RECURSO } from "./API";
-import type { Tarefa } from "../Types/Tarefa";
+import type { Tarefa } from "../types/Tarefa";
 
 // 📌 Função para listar as tarefas (GET)
 export async function listarTarefas(): Promise<Tarefa[]> {
