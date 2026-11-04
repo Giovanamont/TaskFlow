@@ -1,0 +1,128 @@
+.task-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--color-surface);
+  transition: background var(--transition);
+}
+
+.task-card:hover {
+  background: #fbfdff;
+}
+
+.task-card__check {
+  display: grid;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  margin-top: 1px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-border-strong);
+}
+
+.task-card__check:hover {
+  color: var(--color-primary);
+}
+
+.task-card__content {
+  min-width: 0;
+  flex: 1;
+}
+
+.task-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.task-card__header h3 {
+  min-width: 0;
+  flex: 1;
+  margin-bottom: 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.task-card__actions {
+  display: flex;
+  gap: 2px;
+  opacity: 0.58;
+  transition: opacity var(--transition);
+}
+
+.task-card:hover .task-card__actions {
+  opacity: 1;
+}
+
+.task-card__actions button {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--color-text-muted);
+  transition: background var(--transition), color var(--transition);
+}
+
+.task-card__actions button:hover:first-child {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.task-card__actions button:hover:last-child {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.task-card__content > p {
+  margin: 7px 0 10px;
+  color: var(--color-text-soft);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.task-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 650;
+}
+
+.task-card__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.task-card--completed {
+  opacity: 0.68;
+}
+
+.task-card--completed .task-card__header h3 {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.task-card--completed .task-card__check {
+  color: var(--color-success);
+}
+
+@media (max-width: 560px) {
+  .task-card {
+    padding: 16px;
+  }
+
+  .task-card__actions {
+    opacity: 1;
+  }
+}
